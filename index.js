@@ -57,7 +57,7 @@ app.post("/login", async (req, res) => {
     if (result == true) {
       const token = jwt.sign(
         { email: user.email, _id: user.id },
-        process.env.jwt_secret_key
+        process.env.JWT_SECRET_KEY
       );
       return res.send({
         msg: "login successfull",
