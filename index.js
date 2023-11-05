@@ -15,7 +15,9 @@ const ProjectRouter = require("./routes/project.route");
 const TimerRouter = require("./routes/timer");
 
 
-
+app.get("/",(req,res)=>{
+  res.json("welcome to my backend page")
+})
 //Register
 
 app.post("/register",async(req,res)=>{
